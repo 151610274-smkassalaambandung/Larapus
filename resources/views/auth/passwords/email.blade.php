@@ -15,9 +15,27 @@
                 
                 @endif
 
-                {!!Form::open(['url'=>'/password/reset','class'=>'form-horizontal'])!!}
+                {!!Form::open(['url'=>'/password/email','class'=>'form-horizontal'])!!}
 
-                <input type="hiddem" name="token" value="{{$token}}">
+                  <div class="form-group{{$errors->has('email')? 'has-error' :''}}">
+                        {!!Form::label('email','Alamat Email',['class'=>'col-md-4 control-label']) !!}
+                        <div class="col-md-6">
+                            {!!Form::email('email',null,['class'=>'form-control']) !!}
+                            {!!$errors->first('email','<p class="help-block">:message</p>') !!}
+                        </div>
+                    </div>
+
+               </div>
+                </div>
+                         <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                     <i class="fa fa-btn fa-sign-in"></i> Kirim link reset password
+                            </button>
+                        </div>
+                    </div>
+                {!! Form::close() !!}
+
 
 
                    
