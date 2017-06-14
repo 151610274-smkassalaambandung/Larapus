@@ -6,14 +6,12 @@
 <body>
 <center>
 
-Nama : alif
+<h3>PT DAGANG TAHU</h3>
 <br>
 
-alamat : sayati
-<br>
 
-kelas : RPL2
-<br>
+
+
 </center>
 
 </body>

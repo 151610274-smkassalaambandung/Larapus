@@ -37,14 +37,14 @@
                  <div class="form-group{{$errors->has('password_confirmation') ? 'has-error' : '' }}">
                          {!!Form::label('password_confirmation','Konfirmasi password',['class'=>'col-md-4 control-label']) !!}
                     <div class="col-md-6">
-                         {!!Form::password('password_confir',['class'=>'form-control']) !!}
+                         {!!Form::password('password_confirmation',['class'=>'form-control']) !!}
                         {!!$errors->first('password_confirmation','<p class="help-block">:message</p>') !!}
                 </div>
                 </div>
                          <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                     <i class="fa fa-btn fa-sign-in"></i> Daftar
+                                     <i class="fa fa-btn fa-user"></i> Daftar
                             </button>
                         </div>
                     </div>
