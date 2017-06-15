@@ -24,3 +24,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/alif', 'akuController@alif');
+
+Route::group(['prefix'=>'admin', 'middleware'=>['auth']],function (){
+	Route::resource('authors','AuthorsController');
+
+});
+
+
